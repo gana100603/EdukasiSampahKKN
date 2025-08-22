@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edukasi Sampah Padukuhan Purwosari</title>
+  <meta name="description" content="Portal edukasi pengelolaan sampah untuk warga Jogja: jenis sampah, 5R, kompos, data 2024, ringkasan hukum. Dibuat oleh tim KKN Informatika." />
+  <meta name="theme-color" content="#059669" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="no-js">
+
+  <header class="site-header" data-sticky>
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Beranda Edukasi Sampah Jogja">
+        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"><path d="M7 4h10l2.5 5H4.5L7 4z" fill="currentColor"/><rect x="5" y="9" width="14" height="11" rx="2" fill="currentColor" opacity=".2"/></svg>
+        <span>Edukasi Sampah Jogja</span>
+      </a>
+      <div class="header-actions">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav" aria-label="Buka menu">☰</button>
+      </div>
+      <nav id="mainNav" class="nav" role="navigation">
+        <a href="#home">Beranda</a>
+        <a href="#mengapa">Mengapa</a>
+        <a href="#jenis">Jenis</a>
+        <a href="#data24">Data 2024</a>
+        <a href="#limaR">5R</a>
+        <a href="#pot-sumbu">Kreasi</a>
+        <a href="#hukum">Hukum</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="section hero">
+      <div class="container grid-2">
+        <div>
+          <p class="badge">Padukuhan Purwosari • Kota Yogyakarta</p>
+          <h1>Belajar Kelola Sampah <span class="grad">Dengan Benar</span></h1>
+          <p class="lead">Panduan praktis memilah, menerapkan 5R, membuat kompos, memahami data 2024, dan aturan hukum lokal. Untuk Jogja yang lestari.</p>
+          <div class="cta">
+            <a class="btn" href="#jenis">Mulai dari Jenis Sampah</a>
+            <a class="btn ghost" href="#data24">Cek Data 2024</a>
+          </div>
+        </div>
+        <div class="hero-card card">
+          <h3 class="mb8">Skor Kebiasaan Rumah</h3>
+          <p class="muted mb12">Cek kebiasaanmu cepat—jawab 4 pertanyaan.</p>
+          <form id="habitForm" class="habit">
+            <label><input type="checkbox" name="hb" value="1"> Punya 3 tempat sampah (organik, anorganik bersih, residu)</label><br>
+            <label><input type="checkbox" name="hb" value="1"> Cuci-keringkan plastik/kaca/kaleng sebelum setor</label><br>
+            <label><input type="checkbox" name="hb" value="1"> Komposkan sisa organik</label><br>
+            <label><input type="checkbox" name="hb" value="1"> Setor rutin ke sedekah sampah</label><br>
+            <button type="button" class="btn full" id="habitCheck">Hitung Skor</button>
+            <div id="habitScore" class="muted" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section id="mengapa" class="section alt">
+      <div class="container">
+        <h2>Mengapa Pengelolaan Sampah Itu Penting?</h2>
+        <p class="sub">Dampak terhadap lingkungan, kesehatan, dan ekonomi rumah tangga.</p>
+        <div class="cards three">
+          <article class="card"><h3>Lingkungan</h3><p>Mengurangi sampah ke TPA, mencegah pencemaran tanah & air lindi, serta menekan emisi.</p></article>
+          <article class="card"><h3>Kesehatan</h3><p>Meminimalkan sarang vektor penyakit (lalat, tikus, nyamuk) & kualitas udara yang buruk.</p></article>
+          <article class="card"><h3>Ekonomi Sirkular</h3><p>Material daur ulang bernilai. Bank sampah membuka peluang tabungan dan UMKM kreatif.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- JENIS with icon cards -->
+    <section id="jenis" class="section">
+      <div class="container">
+        <h2>Jenis Sampah & Cara Memilah</h2>
+        <p class="sub">Pisahkan dari sumbernya. Kering & bersih memudahkan daur ulang.</p>
+
+        <div class="cards three">
+          <article class="card icon-card">
+            <div class="icon-wrap"><img src="icons/leaf.svg" alt="" aria-hidden="true" /></div>
+            <h3>Sampah Organik</h3>
+            <p>Sisa dapur, sayur, buah, daun. <strong>Aksi:</strong> kompos/biopori. Simpan tertutup agar tidak berbau.</p>
+            <details><summary>Contoh</summary><ul><li>Kulit buah</li><li>Sisa sayur</li><li>Serasah daun</li></ul></details>
+          </article>
+
+          <article class="card icon-card">
+            <div class="icon-wrap"><img src="icons/recycle.svg" alt="" aria-hidden="true" /></div>
+            <h3>Sampah Anorganik</h3>
+            <p>Plastik, kertas, kaca, logam. <strong>Aksi:</strong> cuci-keringkan, pilah per jenis, setor ke bank sampah.</p>
+            <details><summary>Contoh</summary><ul><li>Botol PET</li><li>Karton bersih</li><li>Kaleng alumunium</li></ul></details>
+          </article>
+
+          <article class="card icon-card">
+            <div class="icon-wrap"><img src="icons/bin.svg" alt="" aria-hidden="true" /></div>
+            <h3>Sampah Residu</h3>
+            <p>Sisa yang tidak bisa dikurangi/daur ulang (tisu berminyak, popok). <strong>Aksi:</strong> minimalkan & simpan terpisah.</p>
+            <details><summary>Catatan</summary><ul><li>Jangan dibakar</li><li>Prioritaskan Refuse/Reduce</li></ul></details>
+          </article>
+        </div>
+<br>
+        <div class="card mt16">
+          <h3 class="mb8">Kuis Pemilahan</h3>
+          <p class="muted mb12">Uji cepat: pilih kategori yang benar.</p>
+          <div id="quizContainer" class="quiz-body"></div>
+          <div class="quiz-actions">
+            <button id="checkBtn" class="btn">Periksa Jawaban</button>
+            <span id="scoreText" class="muted"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA 2024 -->
+    <section id="data24" class="section alt">
+      <div class="container">
+        <h2>Data Kunci 2024: Krisis Sampah di Jogja</h2>
+        <p class="sub">Ringkasan fakta yang memicu kondisi darurat/krisis sampah 2024.</p>
+
+        <div class="cards three">
+          <article class="card">
+            <h3>TPA Piyungan Ditutup Permanen</h3>
+            <p>Penutupan permanen 5 Maret 2024 karena over kapasitas; Mei 2024 tutup total. Kab/kota wajib kelola sampah mandiri.</p>
+            <p class="tiny">Sumber: Harian Jogja; DetikJogja.</p>
+          </article>
+          <article class="card">
+            <h3>Produksi Kota Yogya ≈ 200 ton/hari</h3>
+            <p>Perkiraan volume harian sekitar 200 ton pada 2024; pengurangan didorong lewat pemilahan & pengolahan di hulu.</p>
+            <p class="tiny">Sumber: DiswayJogja; laporan dinas/berita lokal.</p>
+          </article>
+          <article class="card">
+            <h3>Evakuasi Akhir 2024</h3>
+            <p>Periode Nataru (akhir Nov 2024–awal Jan 2025) dievakuasi ±3.400 ton sampah; laporan lain menyebut 2.830 ton (Des 2024).</p>
+            <p class="tiny">Sumber: SuaraJogja.id; IDN Times; Radar Jogja.</p>
+          </article>
+        </div>
+<br>
+        <div class="card mt16">
+          <h3>Tabel Singkat & Tautan</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Topik</th><th>Angka</th><th>Sumber</th></tr></thead>
+              <tbody>
+                <tr><td>Penutupan TPA Piyungan</td><td>5 Mar 2024 (permanen), tutup total Mei 2024</td><td><a href="https://jogjapolitan.harianjogja.com/read/2024/03/06/510/1167053/tpa-piyungan-ditutup-permanen-ini-data-volume-sampah-per-tahun" target="_blank">HarianJogja</a> · <a href="https://www.detik.com/jogja/berita/d-7226865/tpa-piyungan-tutup-total-mei-pemda-diy-mulai-pasang-pagar" target="_blank">DetikJogja</a></td></tr>
+                <tr><td>Produksi harian Kota Yogya</td><td>≈ 200 ton/hari (perkiraan)</td><td><a href="https://jogja.disway.id/read/677001/kota-yogyakarta-per-hari-diperkirakan-hasilkan-200-ton-sampah" target="_blank">DiswayJogja</a></td></tr>
+                <tr><td>Evakuasi periode Nataru</td><td>±3.400 ton (Nov 2024–Jan 2025) / 2.830 ton (Des 2024)</td><td><a href="https://jogja.suara.com/read/2025/01/02/164417/fokus-ke-depo-besar-selama-nataru-dlh-evakuasi-3400-ton-sampah-di-kota-jogja" target="_blank">SuaraJogja</a> · <a href="https://jogja.idntimes.com/news/jogja/akhir-tahun-2-830-ton-sampah-kota-yogyakarta-dikirim-ke-piyungan-00-6gk18-fskbj7" target="_blank">IDN Times</a> · <a href="https://radarjogja.jawapos.com/jogja/655482707/sebanyak-2830-ton-sampah-kota-jogja-masuk-ke-tempat-pembuangan-sampah-piyungan-bntul-mulai-jumat-tpa-piyungan-ditutup" target="_blank">Radar Jogja</a></td></tr>
+                <tr><td>Bank Sampah Kota Yogya</td><td>689 unit; reduksi ±17 ton/hari</td><td><a href="https://kumparan.com/pandangan-jogja/dlh-689-bank-sampah-di-kota-yogya-kurangi-17-ton-sampah-per-hari-240c4DsFMg8" target="_blank">Kumparan (DLH)</a></td></tr>
+                <tr><td>Rujukan statistik regional</td><td>Publikasi BPS DIY 2023/2024</td><td><a href="https://yogyakarta.bps.go.id/id/publication/2024/10/16/5b61b193a6194eae19982b7d/statistik-lingkungan-hidup-daerah-istimewa-yogyakarta-2023-2024.html" target="_blank">BPS DIY</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tiny">Catatan: beberapa angka bersifat estimasi/berdasar laporan dinas & media. Selalu cek dokumen resmi terbaru.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5R -->
+    <section id="limaR" class="section">
+      <div class="container">
+        <h2>5R: Refuse, Reduce, Reuse, Recycle, Rot</h2>
+        <div class="timeline">
+          <div class="tl-item"><span class="tl-dot"></span><h3>Refuse</h3><p>Tolak kantong sekali pakai & brosur yang tidak diperlukan.</p></div>
+          <div class="tl-item"><span class="tl-dot"></span><h3>Reduce</h3><p>Pilih kemasan isi ulang, belanja seperlunya, bawa tumbler.</p></div>
+          <div class="tl-item"><span class="tl-dot"></span><h3>Reuse</h3><p>Gunakan ulang toples, botol, kardus; perbaiki barang sebelum beli baru.</p></div>
+          <div class="tl-item"><span class="tl-dot"></span><h3>Recycle</h3><p>Pilah bersih-kering; setorkan ke bank sampah/pengepul tepercaya.</p></div>
+          <div class="tl-item"><span class="tl-dot"></span><h3>Rot</h3><p>Komposkan organik: takakura, ember tumpuk, atau keranjang kompos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELF-WATERING POT (POT SUMBU) -->
+<section id="pot-sumbu" class="section alt">
+  <div class="container">
+    <h2>Kreasi Galon Bekas: Self-Watering Pot (Pot Sumbu)</h2>
+
+    <h3>Alat & Bahan</h3>
+    <ul class="steps">
+      <li>1 galon bekas (Le Minerale / sejenis), bersih dan kering</li>
+      <li>Cutter/gergaji plastik + spidol penanda</li>
+      <li>Kain flanel/kain kompor/tali sumbu (menyerap air)</li>
+      <li>Media tanam (tanah + kompos/sekam) & tanaman/bibit</li>
+    </ul>
+
+    <h3>Langkah Pembuatan</h3>
+    <ol class="steps">
+      <li><strong>Potong galon menjadi 2 bagian.</strong> Bagian atas sebagai pot, bagian bawah sebagai penampung air.</li>
+      <li><strong>Buat lubang untuk sumbu</strong> di pusat/bagian bawah pot (diameter sesuai kain sumbu).</li>
+      <li><strong>Pasang sumbu.</strong> Sisakan ±2–3 cm berada di media tanam dan ±5–7 cm menjuntai ke ruang air.</li>
+      <li><strong>Rakit.</strong> Balik bagian atas (mulut menghadap ke bawah) dan masukkan ke bagian bawah sehingga terbentuk ruang penampung air.</li>
+      <li><strong>Isi.</strong> Tambahkan media tanam pada pot, tanam bibit, lalu isi air pada wadah bawah.</li>
+      <li><strong>Cek.</strong> Pastikan sumbu menyentuh air dan media terasa lembap—tambah air jika habis.</li>
+    </ol>
+
+    <div class="tip card">
+      Tips: Gunakan 2–3 sumbu untuk pot besar; tambahkan beberapa lubang kecil ventilasi di sisi pot agar akar mendapat oksigen.
+      Untuk gantung, buat dua lubang di bibir pot lalu pasang tali. Hindari kain sintetis yang tidak menyerap air.
+    </div>
+  </div>
+</section>
+
+
+    <!-- HUKUM -->
+    <!-- HUKUM -->
+<section id="hukum" class="section">
+  <div class="container">
+    <div class="section-head">
+      <svg viewBox="0 0 64 64" class="sec-icon" aria-hidden="true">
+        <path fill="#334155" d="M40 10l10 10-8 8-10-10z"/>
+        <path fill="#475569" d="M20 30l10 10-6 6-10-10z"/>
+        <rect x="6" y="50" width="36" height="6" rx="3" fill="#94a3b8"/>
+      </svg>
+      <div>
+        <h2>Ringkasan Hukum Terkait</h2>
+        <p class="sub">Ringkas & ada tautan resmi.</p>
+      </div>
+    </div>
+
+    <div class="law-grid">
+      <article class="law-card">
+        <div class="law-label">UU</div>
+        <h3>UU 18/2008</h3>
+        <ul class="law-points">
+          <li>Peran pemerintah & masyarakat.</li>
+          <li>Pengurangan dari sumber.</li>
+          <li>Larangan buang sembarangan.</li>
+        </ul>
+        <a class="law-link" target="_blank"
+           href="https://peraturan.bpk.go.id/Details/39067/u">Buka di JDIH</a>
+      </article>
+
+      <article class="law-card">
+        <div class="law-label">Perda</div>
+        <h3>Perda 1/2022 & 9/2024</h3>
+        <ul class="law-points">
+          <li>Kewajiban memilah.</li>
+          <li>Layanan & pengawasan.</li>
+          <li>Sanksi administratif.</li>
+        </ul>
+        <div class="law-links">
+          <a target="_blank"
+             href="https://peraturan.bpk.go.id/Details/228736/perda-kota-yogyakarta-no-1-tahun-2022">Perda 1/2022</a>
+          <span> • </span>
+          <a target="_blank"
+             href="https://peraturan.bpk.go.id/Details/312459/perda-kota-yogyakarta-no-9-tahun-2024">Perda 9/2024</a>
+        </div>
+      </article>
+
+      <article class="law-card">
+        <div class="law-label">Perwali</div>
+        <h3>Perwali 32/2022</h3>
+        <ul class="law-points">
+          <li>Masterplan 2022–2031.</li>
+          <li>Penguatan bank sampah.</li>
+        </ul>
+        <br>
+        <a class="law-link" target="_blank"
+           href="https://peraturan.bpk.go.id/Details/214150/perwali-kota-yogyakarta-no-32-tahun-2022">Lihat Perwali</a>
+      </article>
+    </div>
+
+    <div class="callout">
+      <svg viewBox="0 0 64 64" width="24" height="24" aria-hidden="true">
+        <circle cx="32" cy="32" r="28" fill="#10b981"/>
+        <rect x="29" y="26" width="6" height="20" fill="#fff"/>
+        <circle cx="32" cy="18" r="4" fill="#fff"/>
+      </svg>
+      <p><strong>Disclaimer:</strong> angka denda/pidana bisa berubah; cek dokumen resmi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section alt">
+  <div class="container">
+    <h2>FAQ</h2>
+    <div class="faq-grid">
+      <details class="faq-item" open>
+        <summary><span>Berapa tempat sampah ideal?</span></summary>
+        <div class="faq-body">
+          <p>Minimal 3: organik, anorganik bersih, residu. Tambah wadah B3 bila perlu.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span>Kenapa plastik dicuci-keringkan?</span></summary>
+        <div class="faq-body">
+          <p>Supaya tidak berjamur/berbau dan memudahkan daur ulang.</p>
+        </div>
+      </details>
+
+ <details class="faq-item">
+  <summary><span>Di mana bank sampah terdekat?</span></summary>
+  <div class="faq-body">
+    <p>
+      Lihat peta sebaran Bank Sampah di Kota Yogyakarta di 
+      <a href="https://lingkunganhidup.jogjakota.go.id/page/index/peta-sebaran-bank-sampah-di-kota-yogyakarta" target="_blank" rel="noopener noreferrer">
+        DLH Kota Yogyakarta
+      </a>
+      .</p>
+  </div>
+</details>
+
+
+
+      <details class="faq-item">
+        <summary><span>Boleh membakar residu?</span></summary>
+        <div class="faq-body">
+          <p>Tidak disarankan karena polusi. Minimalkan dari sumber.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Edukasi Sampah Jogja — tim KKN Informatika.</p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
